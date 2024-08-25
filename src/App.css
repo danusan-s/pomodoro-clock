@@ -1,0 +1,41 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main-container{
+    height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+}
+
+h1{
+    margin:50px;
+    font-size:64px;
+}
+
+.timer-container{
+    display:grid;
+    grid-template-areas:
+    "break session"
+    "timer timer";
+    gap:50px;
+}
+
+.break{
+    text-align:center;
+    grid-area:break;
+}
+
+.session{
+    text-align:center;
+    grid-area:session;
+}
+
+.timer{
+    text-align:center;
+    grid-area:timer;
+}
+
