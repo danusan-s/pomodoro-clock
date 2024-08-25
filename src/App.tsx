@@ -16,13 +16,13 @@ function App() {
         setSessionRunning(true);
         setSeconds(25*60);
         setIsActive(false);
-        const audio = document.getElementById("beep");
+        const audio = document.getElementById("beep") as HTMLAudioElement;
         audio.pause();
         audio.currentTime = 0;
     }
 
     const playAudio=()=>{
-        const audioElement = document.getElementById("beep");
+        const audioElement = document.getElementById("beep") as HTMLAudioElement;
         audioElement.play();
     }
 
@@ -121,9 +121,9 @@ function App() {
                 <p id="time-left">{formatTime()}</p>
                 <button id="start_stop" onClick={()=>{setIsActive(!isActive)}}>Pause</button>
                 <button id="reset" onClick={resetTimer}>Reset</button>
-                <audio id="beep" src={AlarmSound}></audio>
             </div>
         </div>
+        <audio id="beep" src={AlarmSound}></audio>
       </div>
     </>
     )
